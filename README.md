@@ -61,14 +61,14 @@ One of the limitations is that you cannot do this: `WHERE ? = ?` which you can i
 
 Composer
 ```
-composer require twister/sql
+composer require ramphor/sql
 ```
 manually
 ```json
 /* composer.json */
 	"require": {
 		"php": ">=5.6",
-		"twister/sql": "*"
+		"ramphor/sql": "*"
 	}
 ```
 or from GIT
