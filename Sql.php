@@ -24,7 +24,7 @@
  *  SOFTWARE.
  */
 
-namespace Twister;
+namespace Ramphor;
 
 /**
  *  Raw SQL Query Builder
@@ -32,7 +32,7 @@ namespace Twister;
  *  @author      Trevor Herselman <therselman@gmail.com>
  *  @copyright   Copyright (c) 2017 Trevor Herselman
  *  @license     http://opensource.org/licenses/MIT
- *  @link        https://github.com/twister-php/sql
+ *  @link        https://github.com/ramphor/sql
  *  @api
  */
 class Sql
@@ -72,14 +72,14 @@ class Sql
      *
      *  To enable a database specific handler, set the database connection with:
      *
-     *      \Twister\Sql::setConnection($db)
+     *      \Ramphor\Sql::setConnection($db)
      *
      *  MySQL:       {@link https://dev.mysql.com/doc/refman/5.7/en/string-literals.html}
      *  PostgreSQL : {@link https://www.postgresql.org/docs/9.2/static/sql-syntax-lexical.html}
      *
      *  @var callable
      */
-    protected static $escape_handler    =   '\\Twister\\Sql::default_escape_string';
+    protected static $escape_handler    =   '\\Ramphor\\Sql::default_escape_string';
 
 
     /**
@@ -89,56 +89,56 @@ class Sql
      *
      *  To enable a database specific handler, set the database connection with:
      *
-     *      \Twister\Sql::setConnection($db)
+     *      \Ramphor\Sql::setConnection($db)
      *
      *  MySQL:       {@link https://dev.mysql.com/doc/refman/5.7/en/string-literals.html}
      *  PostgreSQL : {@link https://www.postgresql.org/docs/9.2/static/sql-syntax-lexical.html}
      *
      *  @var callable
      */
-    protected static $quote_handler     =   '\\Twister\\Sql::default_quote_string';
+    protected static $quote_handler     =   '\\Ramphor\\Sql::default_quote_string';
 
 
     /**
      *  @var callable
      */
-    protected static $exec      =   '\\Twister\\Sql::noConnError';
+    protected static $exec      =   '\\Ramphor\\Sql::noConnError';
 
 
     /**
      *  @var callable
      */
-    protected static $execute   =   '\\Twister\\Sql::noConnError';
+    protected static $execute   =   '\\Ramphor\\Sql::noConnError';
 
 
     /**
      *  @var callable
      */
-    protected static $query     =   '\\Twister\\Sql::noConnError';
+    protected static $query     =   '\\Ramphor\\Sql::noConnError';
 
 
     /**
      *  @var callable
      */
-    protected static $lookup    =   '\\Twister\\Sql::noConnError';
+    protected static $lookup    =   '\\Ramphor\\Sql::noConnError';
 
 
     /**
      *  @var callable
      */
-    protected static $fetchAll  =   '\\Twister\\Sql::noConnError';
+    protected static $fetchAll  =   '\\Ramphor\\Sql::noConnError';
 
 
     /**
      *  @var callable
      */
-    protected static $fetchAllIndexed   =   '\\Twister\\Sql::noConnError';
+    protected static $fetchAllIndexed   =   '\\Ramphor\\Sql::noConnError';
 
 
     /**
      *  @var callable
      */
-    protected static $fetchNum  =   '\\Twister\\Sql::noConnError';
+    protected static $fetchNum  =   '\\Ramphor\\Sql::noConnError';
 
 
     /**
@@ -170,10 +170,10 @@ class Sql
      *
      *  This list can be modified internally with singleLineStatements() and lowerCaseStatements()
      *
-     *  `Twister\Sql::singleLineStatements()`
+     *  `Ramphor\Sql::singleLineStatements()`
      *      will create single line results (replacing \s+ with ' ') for use with the console / command prompt
      *
-     *  `Twister\Sql::lowerCaseStatements()`
+     *  `Ramphor\Sql::lowerCaseStatements()`
      *      will set all these values to 'lower case' for those that prefer it
      *
      *  @var string[] translations
@@ -4088,14 +4088,14 @@ class Sql
      *
      *  Examples:
      *
-     *      \Twister\Sql::setConnection($conn);
-     *      \Twister\Sql::setConnection($dbconn);
-     *      \Twister\Sql::setConnection($pdo);
-     *      \Twister\Sql::setConnection($mysqli);
-     *      \Twister\Sql::setConnection($mysql);
-     *      \Twister\Sql::setConnection($link);
-     *      \Twister\Sql::setConnection($sqlite);
-     *      \Twister\Sql::setConnection($odbc);
+     *      \Ramphor\Sql::setConnection($conn);
+     *      \Ramphor\Sql::setConnection($dbconn);
+     *      \Ramphor\Sql::setConnection($pdo);
+     *      \Ramphor\Sql::setConnection($mysqli);
+     *      \Ramphor\Sql::setConnection($mysql);
+     *      \Ramphor\Sql::setConnection($link);
+     *      \Ramphor\Sql::setConnection($sqlite);
+     *      \Ramphor\Sql::setConnection($odbc);
      *
      *  Oracle:
      *  https://docs.oracle.com/cd/B28359_01/text.111/b28304/cqspcl.htm#CCREF2091
@@ -4473,15 +4473,15 @@ class Sql
             }
         }
         if ($conn === null) {
-            self::$escape_handler   =   '\\Twister\\Sql::default_escape_string';
-            self::$quote_handler    =   '\\Twister\\Sql::default_quote_string';
-            self::$exec             =   '\\Twister\\Sql::noConnError';
-            self::$execute          =   '\\Twister\\Sql::noConnError';
-            self::$query            =   '\\Twister\\Sql::noConnError';
-            self::$lookup           =   '\\Twister\\Sql::noConnError';
-            self::$fetchAll         =   '\\Twister\\Sql::noConnError';
-            self::$fetchAllIndexed  =   '\\Twister\\Sql::noConnError';
-            self::$fetchNum         =   '\\Twister\\Sql::noConnError';
+            self::$escape_handler   =   '\\Ramphor\\Sql::default_escape_string';
+            self::$quote_handler    =   '\\Ramphor\\Sql::default_quote_string';
+            self::$exec             =   '\\Ramphor\\Sql::noConnError';
+            self::$execute          =   '\\Ramphor\\Sql::noConnError';
+            self::$query            =   '\\Ramphor\\Sql::noConnError';
+            self::$lookup           =   '\\Ramphor\\Sql::noConnError';
+            self::$fetchAll         =   '\\Ramphor\\Sql::noConnError';
+            self::$fetchAllIndexed  =   '\\Ramphor\\Sql::noConnError';
+            self::$fetchNum         =   '\\Ramphor\\Sql::noConnError';
         }
         throw new \Exception('Invalid database type, object, resource or string. No compatible driver detected!');
     }
@@ -4596,14 +4596,14 @@ class Sql
      *  By default, the function uses MySQL rules.
      *  To change the internal escaper, set the connection with
      *
-     *      `Twister\Sql::setConnection($dbconn);`
+     *      `Ramphor\Sql::setConnection($dbconn);`
      *
      *  The `setConnection()` function automatically detects the connection/object type
      *  and sets the internal escape handler.
      *
      *  Or you can manually set the string escaper by calling:
      *
-     *      `Twister\Sql::setEscaper('mysql' | 'postgresql' | 'pdo' | 'sqlite');`
+     *      `Ramphor\Sql::setEscaper('mysql' | 'postgresql' | 'pdo' | 'sqlite');`
      *
      *  By default, this function escapes exactly the same characters as `mysqli::real_escape_string`
      *  `Characters encoded are NUL (ASCII 0), \n, \r, \, ', ", and Control-Z.` ctl-Z = dec:26 hex:1A
@@ -4789,7 +4789,7 @@ class Sql
 
     public static function noConnError()
     {
-        throw new \Exception('No connection has been set, please use \\Twister\\Sql::setConnection($conn) (passing your `connection` variable) before calling this function!');
+        throw new \Exception('No connection has been set, please use \\Ramphor\\Sql::setConnection($conn) (passing your `connection` variable) before calling this function!');
     }
 
 

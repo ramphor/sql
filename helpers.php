@@ -30,14 +30,14 @@
  *  @author      Trevor Herselman <therselman@gmail.com>
  *  @copyright   Copyright (c) 2017 Trevor Herselman
  *  @license     http://opensource.org/licenses/MIT
- *  @link        https://github.com/twister-php/sql
+ *  @link        https://github.com/ramphor/sql
  */
 
 if (! function_exists('sql')) {
     /**
-     *  Helper function to build a new Twister\Sql query objects
+     *  Helper function to build a new Ramphor\Sql query objects
      *
-     *  Construct a new Twister\Sql SQL query builder or statement,
+     *  Construct a new Ramphor\Sql SQL query builder or statement,
      *      normally initialized by the optional $stmt string
      *      and an optional list of $params
      *
@@ -103,12 +103,12 @@ if (! function_exists('sql')) {
      *  @param  mixed       $params
      *                      (optional) Parameters associated with $stmt
      *
-     *  @return Sql Returns a new Twister\Sql instance
+     *  @return Sql Returns a new Ramphor\Sql instance
      *
      */
     function sql($stmt = null, ...$params)
     {
-        return new Twister\Sql($stmt, ...$params);
+        return new Ramphor\Sql($stmt, ...$params);
     }
 }
 

@@ -256,7 +256,7 @@ The code supports camelCase, snake_case and UPPER_CASE syntax; as well as a shor
 ### Constructor
 
 ```php
-use Twister;
+use Ramphor;
 
 $sql = new sql();
 $sql = new Sql();
@@ -264,7 +264,7 @@ $sql = new SQL();
 
 // or
 
-$sql = new \Twister\Sql();
+$sql = new \Ramphor\Sql();
 ```
 
 ### Convenient `sql()` function
@@ -272,7 +272,7 @@ $sql = new \Twister\Sql();
 ```php
 function sql($stmt = null, ...$params)
 {
-	return new Twister\Sql($stmt, ...$params);
+	return new Ramphor\Sql($stmt, ...$params);
 }
 
 $sql = sql();
@@ -389,7 +389,7 @@ The connection type is automatically detected: either a PDO, MySQLi or SQLite3 o
 It will be necessary to set the connection to take full advantage of all the features offered by the class.
 
 ```php
-\Twister\Sql::setConnection($conn);
+\Ramphor\Sql::setConnection($conn);
 ```
 
 Once the connection is set, the class (and all the `sql()` instances you create afterwards) will use your connection to 'escape' and 'quote' strings, and you have the ability to execute your queries directly from the class if you want. Executing queries with the class is entirely optional, but very convenient!
@@ -485,7 +485,7 @@ This class also supports `??` for a literal `?` in your code, as well as `@@` an
 * PHP 5.6+ (makes extensive use of the [...$arg syntax](http://php.net/manual/en/functions.arguments.php#functions.variable-arg-list.new))
 * No external dependencies except (mb\_\*) extension. Use SQLQB in any PHP application or framework.
 * Multiple function call / code styles supported, SELECT() or select(), leftJoin(), left_join() or LEFT_JOIN()
-* Simple global wrapper function `$sql = sql();` instead of calling `$sql = new Twister\Sql();`
+* Simple global wrapper function `$sql = sql();` instead of calling `$sql = new Ramphor\Sql();`
 * Makes extensive use of PHP Magic Methods (\_\_toString(), \_\_get(), \_\_invoke(), \_\_call())
 * Adds a small amount of additional whitespace to format your queries for display
 * Minimal SQL abstraction

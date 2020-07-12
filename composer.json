@@ -9,6 +9,10 @@
         {
             "name": "Trevor Herselman",
             "email": "therselman@gmail.com"
+        },
+        {
+            "name": "Puleeno Nguyen",
+            "email": "puleeno@gmail.com"
         }
     ],
     "require": {
@@ -17,7 +21,7 @@
     },
     "autoload": {
          "psr-4": {
-            "Twister\\": "./"
+            "Ramphor\\": "./"
         },
         "files": [
             "helpers.php"
