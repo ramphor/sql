@@ -1,9 +1,9 @@
 {
-	"name": "twister/sql",
+	"name": "ramphor/sql",
 	"description": "SQL Query String Builder",
 	"keywords": ["sql", "sql wrapper", "raw sql", "fluent style sql"],
 	"type": "library",
-	"homepage": "https://github.com/twister-php/sql",
+	"homepage": "https://github.com/ramphor/sql",
 	"license": "MIT",
 	"authors": [
 		{
