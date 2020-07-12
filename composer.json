@@ -21,7 +21,7 @@
     },
     "autoload": {
          "psr-4": {
-            "Ramphor\\": "./"
+            "Ramphor\\": "./src"
         },
         "files": [
             "helpers.php"
